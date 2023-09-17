@@ -32,5 +32,5 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t cleowoman/nexascale:v1 .
+          docker build -t cleowoman/nexascale:v2 .
           docker push cleowoman/nexascale:v1
