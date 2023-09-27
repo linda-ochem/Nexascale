@@ -40,10 +40,10 @@ stages:
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
-        azureSubscription: 'Azure subscription 1(dd639a63-95d4-4d1c-b1e9-b942b52e5f33)'
+        azureSubscription: 'Azure subscription 1(43e136cc-a254-430d-b25f-ef21ae4614f5)'
         appType: 'webAppContainer'
         WebAppName: 'demo-check'
-        DockerNamespace: 'tsapp1.azurecr.io'
-        DockerRepository: 'demo'
+        DockerNamespace: 'lindacon.azurecr.io'
+        DockerRepository: 'lindaochemnexascale'
         DockerImageTag: |
           $(tag)
