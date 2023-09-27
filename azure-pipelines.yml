@@ -12,7 +12,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '6bdb20a8-76d4-4244-8603-de95ae849e10'
   imageRepository: 'lindaochemnexascale'
-  containerRegistry: 'cicd05.azurecr.io'
+  containerRegistry: 'CICD05.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
