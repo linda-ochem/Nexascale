@@ -20,11 +20,11 @@ stages:
 - stage: Build
   displayName: Build and push stage
   jobs:
-  - job: Build
-    displayName: Build
+  - job: BuildAndPush
+    displayName: Build And Push
     pool:
       name: aws-agent
-      demands: 
+      demands:
         - agent.name -equals aws-agent-pool
     steps:
     - task: Docker@2
@@ -36,14 +36,15 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-          
+
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
         azureSubscription: 'Azure subscription 1(43e136cc-a254-430d-b25f-ef21ae4614f5)'
         appType: 'webAppContainer'
-        WebAppName: 'demo-check'
+        WebAppName: 'nexascale-check'
         DockerNamespace: 'lindacon.azurecr.io'
-        DockerRepository: 'lindaochemnexascale'
+        DockerRepository: 'nexascale'
         DockerImageTag: |
           $(tag)
+
