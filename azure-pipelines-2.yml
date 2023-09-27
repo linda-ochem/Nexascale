@@ -36,15 +36,4 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-
-    - task: AzureRmWebAppDeployment@4
-      inputs:
-        ConnectionType: 'AzureRM'
-        azureSubscription: 'Azure subscription 1(43e136cc-a254-430d-b25f-ef21ae4614f5)'
-        appType: 'webAppContainer'
-        WebAppName: 'nexascale-check'
-        DockerNamespace: 'lindacon.azurecr.io'
-        DockerRepository: 'nexascale'
-        DockerImageTag: |
-          $(tag)
-
+          latest
