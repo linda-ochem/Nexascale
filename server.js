@@ -4,7 +4,7 @@ const app = express();
 const PORT = 8081;
 
 app.get('/', (req, res) => {
-  res.send('This you simple Node.js server written with my pc!');
+  res.send('simple Node.js server written with my pc!');
 });
 
 app.listen(PORT, () => {
