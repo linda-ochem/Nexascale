@@ -4,7 +4,7 @@ const app = express();
 const PORT = 8081;
 
 app.get('/', (req, res) => {
-  res.send('Hello, this is your simple Node.js server!');
+  res.send('Hi, this is your simple Node.js server!');
 });
 
 app.listen(PORT, () => {
